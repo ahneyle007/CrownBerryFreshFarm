@@ -1,0 +1,21 @@
+ul li.active a{
+    background-color: rgba(172, 159, 176, 0.06);
+    color: #7f80b6;
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 85px;
+}
+
+
+.navbar-brand img {
+    position: relative;
+    width: 45px;
+    height: auto;
+    border-radius: 25px;
+    border-style: double;
+    left: 15px;
+    background-size: contain;
+}

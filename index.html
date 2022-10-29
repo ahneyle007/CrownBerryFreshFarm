@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>CrownBerry fresh farm market</title>
+</head>
+<body>
+    <!--Navbar begins-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><img src="image/cberrlogo.jpg" alt="Brand" /></a>
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#waybill" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#eat-healthy" class="nav-link">Healthy Diet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#questions" class="nav-link">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#feedback" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="priceList.html" class="nav-link">Price-List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--NavBar ends-->
+    <!--Showcase begins-->
+    <section class="bg-dark text-light p-3 p-lg-0 pt-lg-2 text-center text-sm-start">
+        <div class="container">
+                <div class="d-md-flex align-items-center justify-content-between">
+                    <div>
+                        <h1>Patronize us at <span class="text-warning">CrownBerry Farms</span></h1>
+                        <p class="lead my-3"> Here @ CrownBerry Fresh Farm Produce, our aim is to help you eat well and reduced cost. We also 
+                            make it our responsibility to help lift up a few number of the population out of the poverty level
+                        by showing them other means of making an income  </p>
+                        <a href="priceList.html"><button class="btn btn-primary btn-lg m-2" > View our Price-List</button></a>
+                    </div>
+                    <img src="image/green peppers.jpg" alt="kids @ school" class="img-fluid w-50 d-none d-sm-block">
+                </div>    
+        </div>
+    </section>
+    <!--Showcase ends-->
+    <!--News letter starts-->
+    <section class="bg-primary text-light p-5" >
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 mb-md-0">Send in your <span class="text-warning">orders</span> here
+                    <a href="#" class="p-5">
+                        <i class="bi bi-arrow-right-circle h1 text-dark"></i>
+                    </a>
+                </h3>
+                
+                <div class="input-group news-input">
+                    <button class="btn btn-dark btn-lg m-2" data-bs-toggle="modal" data-bs-target="#market-list">
+                              Send in your market list
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+           
+        <!-- Modal -->
+        <div class="modal fade" id="market-list" tabindex="-1" aria-labelledby="market-listLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="market-listLabel">Customer's Market List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead"> Fill out your market list and we will get back to you.</p>
+                    <form action="connect.php" method="post" id="m-list">
+                        <div class="mb-1">
+                            <label for="first-item" class="col-form-label">
+                                Customer's Name and Phone No:
+                            </label>
+                            <input type="text" class="form-control" id="first-item" name="customerInfo" required>
+                        </div>
+                        <div class="mb-1">
+                            <label for="second-item" class="col-form-label">
+                                First-item
+                            </label>
+                            <input type="text" class="form-control" id="second-item" name="firstItem" required>
+                        </div>
+                        <div class="mb-1">
+                            <label for="third-item" class="col-form-label">
+                                Second-item
+                            </label>
+                            <input type="text" class="form-control" id="third-item" name="secondItem">
+                        </div>
+                        <div class="mb-1">
+                            <label for="fourth-item" class="col-form-label">
+                                Third-item
+                            </label>
+                            <input type="text" class="form-control" id="fourth-item" name="thirdItem">
+                        </div>
+                        <div class="mb-1">
+                            <label for="fifth-item" class="col-form-label">
+                                Fourth-item
+                            </label>
+                            <input type="text" class="form-control" id="fifth-item" name="fourthItem">
+                        </div>
+                        <input type="submit" Value="Submit" class="btn btn-primary"/>
+                    </form>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!--                <button type="button" class="btn btn-primary" form="m-list" name="submitrequest">Submit</button>  -->
+                </div>
+            </div>
+            </div>
+        </div>
+
+ 
+    </section>
+    <!--News letter ends-->
+    <!--Boxes Begins having bootstrap grid-->
+    <!--box ends-->
+    <!--products starts-->
+    <section id="products"  class="p-5 bg-dark text-light">
+        <div class="container"> 
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-2">
+                    <h6>Soursop</h6>
+                    <img src="image/soursop.jpg" class="img-fluid w-75">
+                </div>
+                <div class="col-md p-2">
+                    <h6>Lettuce</h6>
+                    <img src="image/lettucep.jpg" class="img-fluid w-75">
+                </div>
+                <div class="col-md p-2">
+                    <h6>Tomatoe</h6>
+                    <img src="image/tomato.jpg" class="img-fluid w-75 ">
+                </div>
+                <div class="col-md p-2">
+                    <h6>Cucumber</h6>
+                    <img src="image/gabbage_carrotp.jpg" class="img-fluid w-75">
+                </div>
+                <div class="col-md p-2">
+                    <h6>Irish Potatoe</h6>
+                    <img src="image/Irish5_4.jpg" class="img-fluid w-75 ">
+                </div>
+                <div class="col-md p-2">
+                    <h6>Green Pepper</h6>
+                    <img src="image/green peppers.jpg" class="img-fluid w-75">
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!--products ends-->
+    <!--waybill-->
+    <section id="waybill"  class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">
+                    <h2>Logistics</h2>
+                    <p class="lead">
+                        For products moving to any part of Jos metropolis, we bear the cost for logistics.
+                    </p>
+                    <p>
+                        For products moving to different parts of plateau and of course different parts of the country,
+                        the customer is to bear the cost of the waybill. But with our relationship with the transport
+                        companies, our customers enjoy good discounts when using them.
+                    </p>
+                </div>
+                <div class="col-md">
+                    <h6>We can also handle transportation logistics to help our products get to you.</h6>
+                    <img src="image/transport.jpg" class="img-fluid w-50 ">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--waybill ends-->
+    <!--healthy eating tips-->
+    <section id="eat-healthy"  class="p-5 bg-primary">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md mb-1">
+                    <h6>We really encourage our clients and subscribers to eat healthy, which seems difficult in the 
+                        African/Nigerian context. Some are of the opinion that healthy eating is for the wealthy 
+                        in the society and that is why we have taken up that responsibility to dimistify the myth 
+                        and also show us all how.  
+                    </h6>
+                    <img src="image/Healthy_Food.jpg" class="img-fluid w-50">
+                </div>
+                <div class="col-md p-5 bg-light">
+                    <h2 class="text-info">Healthy Eating Tips</h2>
+                    <p class="lead bg-light text-dark fw-bold">
+                        25 Simple Tips to Make Your Diet Healthier
+                    </p>
+                    <p class="bg-light text-secondary fw-bold">
+                        A diet rich in fruits and vegetables has been scientifically  proven to provide numerous health benefits,
+                        such as reducing your risk of several chronic diseases and keeping your body healthy. In this section we discussed 25
+                        necessary adjustments that can make a regular diet more healthier. This pointers are to be implemented gradually
+                        at a reasonable pace.
+                    </p><button class="btn btn-primary">
+                    <a href="#" class="text-light">
+                        <i class="bi bi-chevron-right"></i>Read More
+                    </a></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--healthy tips ends-->
+    <!--Questions Accordion-->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="questions">
+                <!--Item 1-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#question-one">
+                        Where is CrownBerry Fresh Farm located?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="question-one"
+                        data-bs-parent="questions">
+                        <div class="accordion-body">
+                           We are based in Jos, but our coverage is nation wide
+                        </div>
+                    </div>
+                </div>
+                <!--Item 2-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#question-two">
+                        What kind of farm produce do you deal on?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="question-two"
+                        data-bs-parent="questions">
+                        <div class="accordion-body">
+                           We comfortably handle vegetables and fruits. For instance, Tomato, 
+                           Pepper, Onion, Avacado pear, Irish and Sweet potato, Spring onion, 
+                           Water melon, Carrot. 
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#question-three">
+                        Do you render any other special service?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="question-three"
+                        data-bs-parent="questions">
+                        <div class="accordion-body">
+                           Yes, we also do group purchase at times wherby 3 or more people can 
+                           come together due to limited resources, to buy and share things like
+                            a full bag of onion, or potato etc.<br>
+                            Secondly we also process tomato for clients who needs us to assist
+                             them with that.
+                        </div>
+                    </div>
+                </div>
+                <!--Item 4-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#question-four">
+                        Do you have a company car and driver that transports the paid
+                        products to your customers?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="question-four"
+                        data-bs-parent="questions">
+                        <div class="accordion-body">
+                           No, We use tried and trusted transportation companies.
+                        </div>
+                    </div>
+                </div>
+                <!-- item 5-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#question-five">
+                        Are products transported for free?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="question-five"
+                        data-bs-parent="questions">
+                        <div class="accordion-body">
+                           No, the transportation cost is borne by our clients but
+                           due to our relationship with the transport companies,
+                           our clients enjoy a great deal of discount.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!--Accordion ends here-->
+    <!--feedback starts-->
+    <section id="feedback" class="bg-dark text-light p-5 p-lg-0">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our customers' review about our services</h2>
+                <p> Below are a few reviews from our customers who 
+                    tried our service and got their mind blown 
+                    away (you get what I mean). Most of them ended 
+                    up have a repeat purchase with us and of course
+                     referred us to their friends. 
+                </p>
+            </div>
+            <div class="row g-4 text-center">
+               
+                <div class="col-md-6 col-lg-4 p-3">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body Rev2">
+                            <div class="h2 mb-2">
+                                <img src="image/Review-june21.jpg" alt="owners image">
+                            </div>
+                            <h5 class="card-title mb-1 text-primary">
+                                Nnenna Onitsha
+                            </h5>
+                            <p class="card-text">
+                                Thank you Crownberry Fresh Farm produce, Keep up the good work.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-3">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body Rev2">
+                            <div class="h2 mb-2">
+                                <img src="image/Review-July22.jpg" alt="owners image">
+                            </div>
+                            <h5 class="card-title mb-1 text-primary">
+                                Jacinta Aba
+                            </h3>
+                            <p class="card-text">
+                                Thank you Crownberry Fresh Farm produce, Keep up the good work.
+                            </p>              
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-3">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body Rev2">
+                            <div class="h2 mb-2">
+                                <img src="image/Review-Aug16.jpg" alt="owners image">
+                            </div>
+                            <h5 class="card-title mb-1 text-primary">
+                                Amina Lagos
+                            </h3>
+                            <p class="card-text">
+                                Thank you Crownberry Fresh Farm produce, Keep up the good work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Feedback ends-->
+    <!--Contact & Map-->
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">Contact Info </h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item ">
+                            <span class="fw-bold">Main Location:</span> 7 Stephen Mabas Lane, UTAN GRA Jos.
+
+                        </li>
+                        <li class="list-group-item ">
+                            <span class="fw-bold">Business PhoneNo:</span> 070-884-250-88
+                        </li>
+                        <li class="list-group-item ">
+                            <span class="fw-bold">Company Email:</span> crownberryffp@gmail.com
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><i class="bi bi-twitter m-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook m-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin m-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram m-1"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md">
+                    <div id="map">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=477&amp;height=234&amp;hl=en&amp;q=Utan Lane, Jos,Plateau state,Nigeria&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+
+                                </iframe>
+                                <a href="https://embedmapgenerator.com/">embed google maps in website</a>
+                            </div>
+                        <style>.mapouter{position:relative;text-align:right;width:477px;height:234px;
+                                }
+                                .gmap_canvas {overflow:hidden;background:none!important;width:477px;height:234px;
+                                }
+                                .gmap_iframe {width:477px!important;height:234px!important;
+                                }
+                        </style>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead"> Copyright &copy; 2022 CrwonBerry Design</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+
+    </footer>
+    <script>
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+    crossorigin="anonymous">
+    </script> 
+    
+</body>
+</html>
